@@ -1,0 +1,132 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Base */
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Hero Section */
+.hero-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.1)),
+        url('https://picsum.photos/id/1015/1920/800');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Cards */
+.card-hover {
+    transition: all .3s cubic-bezier(.4, 0, .2, 1);
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        0 20px 25px -5px rgb(0 0 0 / .1),
+        0 8px 10px -6px rgb(0 0 0 / .1);
+}
+
+/* Destination Images */
+.destination-img {
+    transition: transform .4s ease;
+}
+
+.destination-card:hover .destination-img {
+    transform: scale(1.08);
+}
+
+/* Navbar Links */
+.nav-link {
+    transition: color .2s ease;
+}
+
+.nav-link:hover {
+    color: #006CE4;
+}
+
+/* Buttons */
+.trip-btn {
+    transition: .3s;
+    cursor: pointer;
+}
+
+.trip-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Inputs */
+input,
+select {
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #006CE4;
+}
+
+/* Offer Cards */
+.card-hover button {
+    transition: .3s;
+}
+
+.card-hover button:hover {
+    transform: scale(1.03);
+}
+
+/* Destination Card */
+.destination-card {
+    transition: .3s;
+}
+
+.destination-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Footer Icons */
+footer i {
+    cursor: pointer;
+    transition: .3s;
+}
+
+footer i:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+/* Navbar Buttons */
+nav button {
+    transition: .3s;
+}
+
+nav button:hover {
+    transform: scale(1.05);
+}
+
+/* Search Button */
+button.bg-\[\#006CE4\] {
+    transition: .3s;
+}
+
+button.bg-\[\#006CE4\]:hover {
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width:768px) {
+
+    .hero-bg {
+        height: auto;
+        padding: 80px 0;
+    }
+
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    .grid {
+        gap: 1rem;
+    }
+
+}
