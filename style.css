@@ -1,0 +1,7 @@
+body{
+    font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+}
+
+.result{
+    transition: all 0.3s ease;
+}
