@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shreya Tiwari — Portfolio</title>
+  <meta name="description" content="Shreya Tiwari | Web Developer | Portfolio" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff;
+      --accent:#0b76ff; /* blue */
+      --muted:#6b7280;
+      --card:#f8fafc;
+      --radius:14px;
+      --maxw:1100px;
+      color-scheme: light;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#0f172a;line-height:1.45}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:28px}
+
+    /* Header / Nav */
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:54px;height:54px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#66b3ff);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px}
+    nav{display:flex;gap:18px}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    nav a:hover{color:var(--accent)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;padding:18px 0}
+    .intro h1{font-size:32px;margin:0 0 8px}
+    .intro p{margin:0 0 16px;color:var(--muted)}
+    .cta{display:flex;gap:12px}
+    .btn{background:var(--accent);color:white;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600}
+    .btn.ghost{background:transparent;color:var(--accent);border:2px solid var(--card);box-shadow:none}
+
+    /* Card */
+    .card{background:var(--card);padding:16px;border-radius:14px;box-shadow:0 6px 18px rgba(12,24,48,0.06)}
+    .profile{display:flex;flex-direction:column;align-items:center;gap:12px}
+    .avatar{width:140px;height:140px;border-radius:18px;background:linear-gradient(180deg,#dbeafe,#bae6fd);display:flex;align-items:center;justify-content:center;font-size:40px;color:#08306b;font-weight:700}
+    .small{font-size:14px;color:var(--muted)}
+
+    /* Sections */
+    section{padding:28px 0;border-top:1px solid #eef2f7}
+    h2{font-size:20px;margin:0 0 12px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+
+    /* Skills */
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    .skill{background:#f1f8ff;padding:8px 12px;border-radius:10px;font-weight:600;color:#084b8a}
+
+    /* Projects */
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .proj{background:white;border-radius:12px;padding:12px;border:1px solid #eef6ff}
+    .proj h3{margin:0 0 8px;font-size:16px}
+    .proj p{margin:0;color:var(--muted);font-size:14px}
+    .tags{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:12px;padding:6px 8px;border-radius:8px;background:#f3f4f6;color:#374151}
+
+    /* Contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    label{display:block;font-weight:600;margin-bottom:6px}
+    input,textarea{width:100%;padding:10px;border-radius:10px;border:1px solid #e6edf8;font-size:14px}
+    textarea{min-height:120px;resize:vertical}
+
+    footer{padding:24px 0;text-align:center;color:var(--muted);font-size:14px}
+
+    /* Responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;}
+      .projects{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      .wrap{padding:18px}
+      .logo{width:48px;height:48px;font-size:16px}
+    }
+
+    /* Small animations */
+    .fade-up{transform:translateY(8px);opacity:0;transition:all .5s cubic-bezier(.2,.9,.2,1)}
+    .reveal{transform:none;opacity:1}
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">ST</div>
+        <div>
+          <div style="font-weight:700">Shreya Tiwari</div>
+          <div class="small">Web Developer • Frontend Enthusiast</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="intro card fade-up" id="heroLeft">
+          <h1>Hi, I'm <span style="color:var(--accent)">Shreya</span> — a front-end developer</h1>
+          <p>I build clean, responsive websites using HTML, CSS, and JavaScript. I enjoy turning designs into interactive experiences.</p>
+          <div class="cta">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn ghost" href="#contact">Hire Me</a>
+          </div>
+
+          <div style="margin-top:18px;display:flex;gap:12px;align-items:center">
+            <div style="font-weight:700">Location</div>
+            <div class="small">India</div>
+          </div>
+        </div>
+
+        <aside class="card profile fade-up" id="heroRight">
+          <div class="avatar">ST</div>
+          <div style="text-align:center">
+            <div style="font-weight:700">Shreya Tiwari</div>
+            <div class="small">B.Tech CSE • 3rd Year</div>
+          </div>
+
+          <div style="width:100%;margin-top:12px">
+            <div style="display:flex;justify-content:space-between;margin-bottom:6px"><div class="small">HTML</div><div class="small">Advanced</div></div>
+            <div style="background:#e6f2ff;border-radius:999px;height:10px;overflow:hidden"><div style="width:92%;height:100%;background:linear-gradient(90deg,var(--accent),#66b3ff)"></div></div>
+
+            <div style="display:flex;justify-content:space-between;margin:8px 0 6px"><div class="small">CSS</div><div class="small">Advanced</div></div>
+            <div style="background:#f4f7fb;border-radius:999px;height:10px;overflow:hidden"><div style="width:86%;height:100%;background:linear-gradient(90deg,#0b76ff,#66b3ff)"></div></div>
+
+            <div style="display:flex;justify-content:space-between;margin:8px 0 6px"><div class="small">JavaScript</div><div class="small">Intermediate</div></div>
+            <div style="background:#f4f7fb;border-radius:999px;height:10px;overflow:hidden"><div style="width:72%;height:100%;background:linear-gradient(90deg,#0b76ff,#66b3ff)"></div></div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about">
+        <div class="grid-2">
+          <div>
+            <h2>About Me</h2>
+            <p class="small">I'm a 3rd year B.Tech (CSE) student passionate about frontend development. I love building responsive UI, learning modern JavaScript, and improving user experience. Currently learning frameworks and building projects to showcase my skills.</p>
+
+            <div style="margin-top:12px">
+              <h2>Education</h2>
+              <p class="small"><strong>B.Tech in Computer Science</strong> — Your College Name (2023 - Present)</p>
+              <p class="small"><strong>12th (PCM)</strong> — School Name (Year)</p>
+            </div>
+          </div>
+
+          <div>
+            <h2>Quick Facts</h2>
+            <ul style="margin:8px 0;padding-left:18px;color:var(--muted)">
+              <li>Pure vegetarian</li>
+              <li>Comfortable in Hindi & English</li>
+              <li>CBSE background</li>
+            </ul>
+
+            <h2 style="margin-top:12px">Contact</h2>
+            <p class="small">Email: <a href="mailto:shreya.tiwari@example.com">shreya.tiwari@example.com</a></p>
+            <p class="small">Phone: +91-xxxxxxxxxx</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+          <div class="skill">HTML</div>
+          <div class="skill">CSS</div>
+          <div class="skill">JavaScript</div>
+          <div class="skill">Responsive Design</div>
+          <div class="skill">Git</div>
+          <div class="skill">Bootstrap</div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+        <h2>Selected Projects</h2>
+        <div class="projects">
+          <article class="proj">
+            <h3>Personal Portfolio Website</h3>
+            <p>A responsive portfolio to showcase projects, skills, and contact information. Built with HTML, CSS & vanilla JavaScript.</p>
+            <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+          </article>
+
+          <article class="proj">
+            <h3>Weather App</h3>
+            <p>Fetches real-time weather using OpenWeather API and displays temperature, humidity, and conditions for searched cities.</p>
+            <div class="tags"><span class="tag">API</span><span class="tag">JavaScript</span></div>
+          </article>
+
+          <article class="proj">
+            <h3>To-Do List App</h3>
+            <p>Simple to-do app with LocalStorage support to save tasks and mark them complete.</p>
+            <div class="tags"><span class="tag">LocalStorage</span><span class="tag">UI</span></div>
+          </article>
+
+          <article class="proj">
+            <h3>Attendance Management (Mini)</h3>
+            <p>A small app to mark and view attendance — perfect for college mini project submissions.</p>
+            <div class="tags"><span class="tag">CRUD</span><span class="tag">JavaScript</span></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-grid">
+          <div class="card">
+            <form onsubmit="handleContact(event)">
+              <div style="margin-bottom:12px">
+                <label for="name">Name</label>
+                <input id="name" name="name" placeholder="Your name" required />
+              </div>
+              <div style="margin-bottom:12px">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              </div>
+              <div style="margin-bottom:12px">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write your message" required></textarea>
+              </div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" type="submit">Send</button>
+                <button type="button" class="btn ghost" onclick="copyEmail()">Copy Email</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="card">
+            <h3>Reach Out</h3>
+            <p class="small">I usually reply within a few days. For quick contact you can email me at:</p>
+            <p style="font-weight:700;margin:8px 0">shreya.tiwari@example.com</p>
+            <div style="margin-top:8px">
+              <h4 style="margin:0 0 6px">Links</h4>
+              <div style="display:flex;gap:8px;flex-wrap:wrap">
+                <a class="tag" href="#" onclick="alert('Add your GitHub link')">GitHub</a>
+                <a class="tag" href="#" onclick="alert('Add your LinkedIn link')">LinkedIn</a>
+                <a class="tag" href="#" onclick="alert('Add your Resume link')">Resume</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      © <span id="year"></span> Shreya Tiwari — Built with ❤️
+    </footer>
+  </div>
+
+  <script>
+    // small helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // reveal animations on load
+    window.addEventListener('load', ()=>{
+      document.querySelectorAll('.fade-up').forEach((el, i)=>{
+        setTimeout(()=> el.classList.add('reveal'), 120 * i);
+      });
+    });
+
+    // Contact form handler (client-side only) - opens mail client
+    function handleContact(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const subject = encodeURIComponent('Contact from portfolio: ' + name);
+      const body = encodeURIComponent('Name: '+name+'\nEmail: '+email+'\n\n'+message);
+      // fallback to mailto
+      window.location.href = `mailto:shreya.tiwari@example.com?subject=${subject}&body=${body}`;
+    }
+
+    function copyEmail(){
+      navigator.clipboard?.writeText('shreya.tiwari@example.com')
+        .then(()=> alert('Email copied to clipboard'))
+        .catch(()=> prompt('Copy email:', 'shreya.tiwari@example.com'));
+    }
+  </script>
+</body>
+</html>
